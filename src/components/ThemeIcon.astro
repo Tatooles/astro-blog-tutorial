@@ -20,6 +20,8 @@
 </style>
 
 <script is:inline>
+  // This just checks local storage and browser theme
+  // But I think some of this is handled by tailwind
   document.addEventListener('astro:page-load', () => {
     const theme = (() => {
       if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {

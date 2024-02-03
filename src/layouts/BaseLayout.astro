@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 
 const { pageTitle } = Astro.props;
 ---
-<html class="bg-[#f1f5f9] font-sans" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -15,11 +15,13 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
     <ViewTransitions />
   </head>
-  <body class="mx-auto my-0 w-full p-4 max-w-3xl">
-		<Header />
-    <h1 transition:animate="slide">{pageTitle}</h1>
-    <slot />
-		<Footer />
+  <body class="w-screen h-screen font-sans bg-[#f1f5f9] dark:bg-[#0d0950] dark:text-white">
+    <div class="mx-auto my-0 w-full p-4 max-w-3xl ">
+      <Header />
+      <h1 transition:animate="slide">{pageTitle}</h1>
+      <slot />
+      <Footer />
+    </div>
 		
 		<script>
 			import '../scripts/menu.ts'
