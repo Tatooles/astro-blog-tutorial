@@ -16,10 +16,12 @@ const { pageTitle } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="w-screen h-screen font-sans bg-[#f1f5f9] dark:bg-[#0d0950] dark:text-white">
-    <div class="mx-auto my-0 w-full p-4 max-w-3xl ">
+    <div class="mx-auto my-0 w-full h-full flex flex-col p-4 max-w-3xl">
       <Header />
-      <h1 transition:animate="slide">{pageTitle}</h1>
-      <slot />
+      <div class="flex-grow">
+        <h1 transition:animate="slide">{pageTitle}</h1>
+        <slot />
+      </div>
       <Footer />
     </div>
 		
